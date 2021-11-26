@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class LoginPage {
+import com.Boilerplate.Utils.commonUtils;
 
-	WebDriver driver;
+public class LoginPage extends Base {
 	
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
@@ -30,10 +30,36 @@ public class LoginPage {
 	@FindBy(xpath="//div[@class=\"error svelte-1tn0i9i\"]")
 	WebElement loginerrorElement;
 	
-	public Dashboard loginToApp(String username,String pass) {
-		     loginemail.sendKeys(username);
-		     loginpass.sendKeys(pass);
-		     loginbtn.click();
+	@FindBy(xpath ="//div[@class='error svelte-1tn0i9i']")
+	WebElement invalidemail;
+	
+	@FindBy(xpath = "//div[@class='forgot svelte-1tn0i9i']/child::a")
+	WebElement forgetlink;
+	
+	@FindBy(xpath = "//div[@class='input-with-icon svelte-fju3o0']/child::input")
+	WebElement forgetEmail;
+	
+	@FindBy(xpath = "//div[@class='buttons svelte-tqwzjz']/child::span/child::button")
+	WebElement sendlink;
+	
+	@FindBy(xpath = "//div[@class='toast-container sevelte-1ijrbo5']/child::div[@class='toast-message sevelte-1ijrbo5']")
+	WebElement notificationtext;
+	
+	@FindBy(xpath = "//div[@class='logo svelte-1tn0i9i']/child::img")
+	WebElement applogo;
+	
+	@FindBy(xpath = "//button[@class='primary svelte-oviy1s noLeftPad']")
+	WebElement recbtn;
+	@FindBy(xpath = "//button[@class='white svelte-oviy1s noLeftPad']")
+	WebElement midlogoutbtn;
+	
+	public void commonLogin(String username,String pass) {
+		 loginemail.sendKeys(username);
+	     loginpass.sendKeys(pass);
+	     loginbtn.click();
+	}
+	
+	public Dashboard loginToApp() {
 		     adminbtn.click();
 		     
 		     return new Dashboard();   
@@ -45,5 +71,58 @@ public class LoginPage {
 	     loginbtn.click();
 	     String errormsg=loginerrorElement.getText();
 	     return errormsg;
+	}
+	
+	public String loginWithInvalidEmail(String username,String pass) {
+		 loginemail.sendKeys(username);
+	     loginpass.sendKeys(pass);
+	     loginbtn.click();
+	     String errormsg=invalidemail.getText();
+	     return errormsg;
+	}
+	
+	public boolean isforgetlinkExist() {
+		if (forgetlink.isDisplayed()) {
+			return true;
+		} else {
+            return false;
+		}
+	}
+	
+	public String sendForgetLink(String forgetmail) {
+		forgetlink.click();
+		forgetEmail.sendKeys(forgetmail);
+		sendlink.click();
+		//utils.waitForNextAction("https://app.boilerplate.co/login");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    return driver.getCurrentUrl();
+	}
+	
+	public boolean isLogoPresent() {
+		if (applogo.isDisplayed()) {
+			return true;
+		} else {
+            return false;
+		}
+	}
+	
+	public Recipient navigateRecipient() {
+		recbtn.click();
+		
+		return new Recipient();
+	}
+	
+	public void midLogout() {
+		if (midlogoutbtn.isDisplayed()) {
+		  midlogoutbtn.click();
+		} else {
+           System.out.println("button not displayed");
+		}
+			
 	}
 }

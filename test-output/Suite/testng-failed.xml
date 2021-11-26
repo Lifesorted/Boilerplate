@@ -4,13 +4,14 @@
   <test name="Test(failed)">
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.Boilerplate.LoginTest.loginTest">
+      <class name="com.Boilerplate.LoginTest.ReqDashboardTest">
         <methods>
+          <include name="dashboardViewTest"/>
+          <include name="initialize"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="loginTest_002"/>
         </methods>
-      </class> <!-- com.Boilerplate.LoginTest.loginTest -->
+      </class> <!-- com.Boilerplate.LoginTest.ReqDashboardTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

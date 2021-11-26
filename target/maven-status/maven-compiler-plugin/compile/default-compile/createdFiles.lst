@@ -1,0 +1,7 @@
+com\Boilerplate\pages\Recipient.class
+com\Boilerplate\Utils\GetPropertyData.class
+com\Boilerplate\pages\Dashboard.class
+com\Boilerplate\Utils\GetExcelData.class
+com\Boilerplate\pages\Base.class
+com\Boilerplate\Utils\commonUtils.class
+com\Boilerplate\pages\LoginPage.class
