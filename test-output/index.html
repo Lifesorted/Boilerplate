@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Boilerplate.LoginTest.ReqDashboardTest" hash-for-method="verifySearchField">verifySearchField</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Boilerplate.LoginTest.ReqDashboardTest" hash-for-method="switchToNextMenu">switchToNextMenu</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySearchField">
-                  </a> <!-- verifySearchField -->
-                  <span class="method-name">verifySearchField</span>
+                  <a name="switchToNextMenu">
+                  </a> <!-- switchToNextMenu -->
+                  <span class="method-name">switchToNextMenu</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,7 +142,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;Test&quot;&gt;
+  &lt;test name=&quot;Test&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.Boilerplate.LoginTest.ReqDashboardTest&quot;/&gt;
@@ -187,14 +187,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySearchField')
+data.setCell(0, 1, 'switchToNextMenu')
 data.setCell(0, 2, 'com.Boilerplate.LoginTest.ReqDashboardTest')
-data.setCell(0, 3, 4793);
+data.setCell(0, 3, 14923);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -209,13 +209,19 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.Boilerplate.LoginTest.ReqDashboardTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">dashboardViewTest</span>
+                <br/>
+                <span class="ignored-method-name">verifySearchField</span>
+                <br/>
+                <span class="ignored-method-name">verifySearchResult</span>
+                <br/>
+                <span class="ignored-method-name">allMenulinks</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -234,15 +240,15 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">11214 ms</span>
+                <span class="method-start">15992 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifySearchField</span>
-                <span class="method-start">11329 ms</span>
+                <span class="method-name">switchToNextMenu</span>
+                <span class="method-start">16030 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">16123 ms</span>
+                <span class="method-name">tearDown([TestResult name=switchToNextMenu status=SUCCESS method=ReqDashboardTest.switchToNextMenu()[pri:4, i...)</span>
+                <span class="method-start">30954 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
