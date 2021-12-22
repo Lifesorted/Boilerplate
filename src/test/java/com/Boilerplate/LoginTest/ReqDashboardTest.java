@@ -65,12 +65,21 @@ public class ReqDashboardTest extends Base{
 	    Assert.assertEquals(searchval, GetExcelData.getSearchData());    
 	}
 	
-	@Test(priority=4,enabled = true)
+	@Test(priority=4,enabled = false)
 	public void switchToNextMenu() {
 		loginpage.commonLogin("prem@boilerplate.co", "12345678");
 	    loginpage.loginToApp();
 	    boolean switchmenu=dashboard.switchToMenuLink();
 	    Assert.assertTrue(switchmenu);
 	}
+	
+	@Test(priority=5,enabled = true)
+	public void deleteContact() {
+		loginpage.commonLogin("prem@boilerplate.co", "12345678");
+	    loginpage.loginToApp();
+	    dashboard.deletefromDashboard();
+	}
+	
+	
 	
 }

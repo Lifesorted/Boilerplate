@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="50689" started-at="2021-11-24T10:05:37 IST" finished-at="2021-11-24T10:06:27 IST">
+  <suite name="Suite" duration-ms="31436" started-at="2021-12-22T21:18:31 IST" finished-at="2021-12-22T21:19:03 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="50689" started-at="2021-11-24T10:05:37 IST" finished-at="2021-11-24T10:06:27 IST">
+    <test name="Test" duration-ms="31436" started-at="2021-12-22T21:18:31 IST" finished-at="2021-12-22T21:19:03 IST">
       <class name="com.Boilerplate.LoginTest.ReqDashboardTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="setUp" is-config="true" duration-ms="39706" started-at="2021-11-24T10:05:37 IST" finished-at="2021-11-24T10:06:16 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="setUp" is-config="true" duration-ms="13902" started-at="2021-12-22T21:18:31 IST" finished-at="2021-12-22T21:18:45 IST">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="initialize" is-config="true" duration-ms="225" started-at="2021-11-24T10:06:16 IST" finished-at="2021-11-24T10:06:17 IST">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="initialize" is-config="true" duration-ms="81" started-at="2021-12-22T21:18:45 IST" finished-at="2021-12-22T21:18:45 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="verifySearchField()[pri:1, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="verifySearchField" duration-ms="9688" started-at="2021-11-24T10:06:17 IST" finished-at="2021-11-24T10:06:26 IST">
+        <test-method status="PASS" signature="deleteContact()[pri:5, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="deleteContact" duration-ms="16126" started-at="2021-12-22T21:18:45 IST" finished-at="2021-12-22T21:19:01 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchField -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="tearDown" is-config="true" duration-ms="1026" started-at="2021-11-24T10:06:26 IST" finished-at="2021-11-24T10:06:27 IST">
+        </test-method> <!-- deleteContact -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14]" name="tearDown" is-config="true" duration-ms="1250" started-at="2021-12-22T21:19:01 IST" finished-at="2021-12-22T21:19:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteContact status=SUCCESS method=ReqDashboardTest.deleteContact()[pri:5, instance:com.Boilerplate.LoginTest.ReqDashboardTest@32464a14] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

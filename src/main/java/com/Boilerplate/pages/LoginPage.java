@@ -24,7 +24,7 @@ public class LoginPage extends Base {
 	@FindBy(xpath = "//span[contains(text(),'Login')]")
 	WebElement loginbtn;
 	
-	@FindBy(xpath = "//div[@class=\"buttons svelte-1n94w13\"]/child::span[1]/child::button")
+	@FindBy(xpath = "//div[@class=\"buttons svelte-1aorqzv\"]/child::span[1]/child::button")
 	WebElement adminbtn;
 	
 	@FindBy(xpath="//div[@class=\"error svelte-1tn0i9i\"]")

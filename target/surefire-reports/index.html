@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Boilerplate.LoginTest.ReqDashboardTest" hash-for-method="verifySearchField">verifySearchField</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Boilerplate.LoginTest.ReqDashboardTest" hash-for-method="deleteContact">deleteContact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySearchField">
-                  </a> <!-- verifySearchField -->
-                  <span class="method-name">verifySearchField</span>
+                  <a name="deleteContact">
+                  </a> <!-- deleteContact -->
+                  <span class="method-name">deleteContact</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,7 +142,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.Boilerplate.LoginTest.ReqDashboardTest&quot;/&gt;
@@ -187,14 +187,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySearchField')
+data.setCell(0, 1, 'deleteContact')
 data.setCell(0, 2, 'com.Boilerplate.LoginTest.ReqDashboardTest')
-data.setCell(0, 3, 9688);
+data.setCell(0, 3, 16126);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -209,13 +209,21 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.Boilerplate.LoginTest.ReqDashboardTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">dashboardViewTest</span>
+                <br/>
+                <span class="ignored-method-name">verifySearchField</span>
+                <br/>
+                <span class="ignored-method-name">switchToNextMenu</span>
+                <br/>
+                <span class="ignored-method-name">verifySearchResult</span>
+                <br/>
+                <span class="ignored-method-name">allMenulinks</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -234,15 +242,15 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">39706 ms</span>
+                <span class="method-start">13903 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifySearchField</span>
-                <span class="method-start">39932 ms</span>
+                <span class="method-name">deleteContact</span>
+                <span class="method-start">13985 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">49623 ms</span>
+                <span class="method-name">tearDown([TestResult name=deleteContact status=SUCCESS method=ReqDashboardTest.deleteContact()[pri:5, instanc...)</span>
+                <span class="method-start">30137 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

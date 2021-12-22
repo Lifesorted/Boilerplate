@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.Boilerplate.Utils.GetExcelData;
+import com.Boilerplate.Utils.commonUtils;
 
 public class Dashboard extends Base {
 	
@@ -46,6 +47,18 @@ public class Dashboard extends Base {
 	
 	@FindBy(xpath="//div[contains(text(),'Checklists')]")
 	WebElement checklistmenu;
+	
+	@FindBy(xpath="//div[@class=\"recipient-info clickable svelte-1rok1zs active\"]/descendant::div[@class=\"container svelte-v1j8fd\"]")
+	WebElement listmenuElement;
+	
+	@FindBy(xpath = "//div[contains(text(),'Delete')]")
+	WebElement deleteaction;
+	
+	@FindBy(xpath = "//input[@placeholder=\"delete\"]")
+	WebElement deleteinput;
+	
+	@FindBy(xpath = "//button[@class=\"danger-solid svelte-9ranqv\"]")
+	WebElement deletebtn;
 	
 	public String verifyDashboard() {
 	     if (checklist.isDisplayed()) {
@@ -100,5 +113,17 @@ public class Dashboard extends Base {
     	
     }
     
+    
+    public void deletefromDashboard() {
+    	commonUtils.waitForNextAction(driver, 30, guidecross);
+		if(listmenuElement.isDisplayed()) {
+			listmenuElement.click();
+			deleteaction.click();
+			deleteinput.sendKeys("delete");
+			commonUtils.waitForNextAction(driver, 30, deletebtn);
+		}else {
+			System.out.println("Hamburger icon not present");
+		}
+	}
 
 }

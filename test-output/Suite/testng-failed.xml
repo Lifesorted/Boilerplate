@@ -7,8 +7,8 @@
       <class name="com.Boilerplate.LoginTest.ReqDashboardTest">
         <methods>
           <include name="initialize"/>
-          <include name="switchToNextMenu"/>
           <include name="setUp"/>
+          <include name="deleteContact"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.Boilerplate.LoginTest.ReqDashboardTest -->
